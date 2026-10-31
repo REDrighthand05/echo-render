@@ -1,7 +1,7 @@
-"""MUS — a fast, deterministic CPU rasterizer for coloured 3D points
+"""Echo Render — a fast, deterministic CPU rasterizer for coloured 3D points
 and line segments.
 
-MUS draws exactly the geometry it is given: perspective projection, a
+Echo Render (engine codename MUS) draws exactly the geometry it is given: perspective projection, a
 depth-ordered splat for points (soft glow disc + opaque core), and
 1px anti-aliased (Xiaolin Wu) line segments beneath the points, over a
 flat background. Nothing is estimated, averaged or voted on.

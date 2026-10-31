@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""MUS demo — a fully synthetic scene, rendered entirely on CPU.
+"""Echo Render demo — a fully synthetic scene, rendered entirely on CPU.
 
 Builds a colourful point cube, a glowing helix and a ground grid from
 plain numpy arrays, adds wireframe cube edges, and renders one frame
-to ``docs/demo.png`` with :func:`mus_render.render_frame`.
+to ``docs/demo.png`` with :func:`echo_render.render_frame`.
 No input files, no GPU, no browser.
 
-Run from the repository root (works whether or not mus-render is
+Run from the repository root (works whether or not echo-render is
 pip-installed)::
 
     python examples/render_demo.py
@@ -16,14 +16,14 @@ from pathlib import Path
 
 import numpy as np
 
-# Make the in-repo package importable when mus-render is not installed.
+# Make the in-repo package importable when echo-render is not installed.
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from mus_render import render_frame  # noqa: E402
+from echo_render import render_frame  # noqa: E402
 
 
 def look_at(eye, target, focal=950.0, width=1280, height=720):
-    """Build a mus_render camera dict: pinhole, world -> camera."""
+    """Build an echo_render camera dict: pinhole, world -> camera."""
     eye = np.asarray(eye, dtype=np.float64)
     fwd = np.asarray(target, dtype=np.float64) - eye
     fwd /= np.linalg.norm(fwd)

@@ -1,11 +1,12 @@
-# MUS — 高性能渲染算子
+# Echo Render — ECHO 配套高性能渲染算子
 
 **纯 CPU 的点云 / 线框渲染器。** 给它带颜色的 3D 点（可选线段）和一个针孔
 相机，它直接算出一帧图像 —— 不需要 GPU，不需要浏览器，不需要图形 API。
 底层只有 numpy + numba。
 
-MUS was born inside the [ECHO](https://github.com/REDrighthand05/echo4d)
-project, tailored to its data specs, and released standalone so anyone
+本算子为 [ECHO 回声](https://github.com/REDrighthand05/echo4d) 的配套组件，引擎代号 MUS。
+Echo Render is the companion renderer for ECHO; engine codename MUS.
+It is tailored to ECHO's data specs, and released standalone so anyone
 can use it out of the box.
 
 ![demo](docs/demo.png)
@@ -27,8 +28,8 @@ can use it out of the box.
 ## 安装
 
 ```bash
-git clone https://github.com/REDrighthand05/mus-render
-cd mus-render
+git clone https://github.com/REDrighthand05/echo-render
+cd echo-render
 pip install .
 ```
 
@@ -40,7 +41,7 @@ pip install .
 ```python
 import numpy as np
 from PIL import Image
-from mus_render import render_frame
+from echo_render import render_frame
 
 # A cube shell of points; colour encodes position.
 g = np.linspace(-1, 1, 26)
@@ -136,7 +137,7 @@ MIT — 见 [LICENSE](LICENSE)。
 
 ---
 
-# MUS — a fast CPU point-cloud & wireframe renderer
+# Echo Render — a fast CPU point-cloud & wireframe renderer
 
 **A pure-CPU point-cloud & wireframe renderer.** Feed it coloured 3D
 points (and optional line segments) plus a pinhole camera, and it
@@ -161,8 +162,8 @@ Built on numpy + numba only.
 ## Install
 
 ```bash
-git clone https://github.com/REDrighthand05/mus-render
-cd mus-render
+git clone https://github.com/REDrighthand05/echo-render
+cd echo-render
 pip install .
 ```
 
@@ -220,7 +221,7 @@ point): the full 208,666-point cloud with glow renders at roughly
 
 ## Honest notes
 
-- **CPU only** — there is no GPU backend, by design: MUS targets
+- **CPU only** — there is no GPU backend, by design: Echo Render targets
   machines without a GPU, or pipelines that don't want a graphics
   stack, and must be reproducible there.
 - It renders **only** the geometry you pass in: no hole filling, no

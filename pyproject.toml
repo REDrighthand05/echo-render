@@ -3,9 +3,9 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mus-render"
+name = "echo-render"
 version = "0.1.0"
-description = "MUS — a fast, deterministic CPU point-cloud & wireframe renderer (numpy + numba). No GPU, no browser."
+description = "Echo Render — ECHO's companion renderer: a fast, deterministic CPU point-cloud & wireframe renderer (numpy + numba; engine codename MUS). No GPU, no browser."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/REDrighthand05/mus-render"
+Homepage = "https://github.com/REDrighthand05/echo-render"
 
 [tool.setuptools]
-packages = ["mus_render"]
+packages = ["echo_render"]
