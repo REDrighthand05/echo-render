@@ -1,5 +1,14 @@
 # Echo Render — ECHO 配套高性能渲染算子
 
+<div align="center">
+
+![License](https://img.shields.io/badge/License-MIT-0e75b6?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-%E2%89%A53.10-38bdf8?style=for-the-badge&logo=python)
+![GPU](https://img.shields.io/badge/GPU-%E4%B8%8D%E9%9C%80%E8%A6%81-2ea44f?style=for-the-badge)
+[![Part of ECHO](https://img.shields.io/badge/Part_of-ECHO_%E5%9B%9E%E5%A3%B0-0e75b6?style=for-the-badge&logo=github)](https://github.com/REDrighthand05/echo4d)
+
+</div>
+
 **纯 CPU 的点云 / 线框渲染器。** 给它带颜色的 3D 点（可选线段）和一个针孔
 相机，它直接算出一帧图像 —— 不需要 GPU，不需要浏览器，不需要图形 API。
 底层只有 numpy + numba。
